@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:08:48 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/19 13:48:43 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/19 15:57:17 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class Cat: public Animal
 {
 	public:
-		void makeSound();
+		void makeSound() const;
 		
 		Cat();
 		~Cat();

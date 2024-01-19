@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:09:41 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/19 14:32:03 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/19 15:56:52 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Dog::~Dog()
 
 
 
-void Dog::makeSound()
+void Dog::makeSound() const
 {
-    std::cout<< "Bau" <<std::endl;
+    std::cout<< "Bark!" <<std::endl;
 }

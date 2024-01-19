@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:07:50 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/19 14:25:17 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/19 15:54:57 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Animal::Animal(std::string type)
 
 
 
-std::string Animal::getType()
+std::string Animal::getType() const
 {
     return (this->type);
 }
@@ -42,7 +42,7 @@ void Animal::setType(std::string type)
 
 
 
-void Animal::makeSound()
+void Animal::makeSound() const
 {
     
 }

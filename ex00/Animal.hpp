@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:07:57 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/19 14:10:18 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/19 15:54:43 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ class Animal
         std::string type;
     
     public:
-        void makeSound();
+        void makeSound() const;
 
-        std::string getType();
+        std::string getType() const;
         void setType(std::string type);
 
         Animal();
