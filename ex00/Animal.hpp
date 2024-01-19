@@ -6,10 +6,25 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:07:57 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/19 12:12:06 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/19 13:28:01 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
+
+class Animal
+{
+    protected:
+        std::string type;
+    
+    public:
+        void makeSound();
+
+        std::string getType();
+        void setType(std::string type);
+
+        Animal();
+        ~Animal();
+};
 
