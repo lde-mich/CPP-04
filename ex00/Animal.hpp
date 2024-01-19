@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:07:57 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/19 13:28:01 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/19 14:10:18 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Animal
         void setType(std::string type);
 
         Animal();
+        Animal(std::string type);
         ~Animal();
 };
 
