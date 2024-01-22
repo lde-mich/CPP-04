@@ -1,59 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 14:58:27 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/22 14:48:15 by lde-mich         ###   ########.fr       */
+/*   Created: 2024/01/19 12:08:30 by lde-mich          #+#    #+#             */
+/*   Updated: 2024/01/22 14:02:46 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
+#include "Cat.hpp"
 
-WrongCat::WrongCat(): WrongAnimal()
+Cat::Cat(): Animal()
 {
-    std::cout<< GREEN << "WrongCat constructor called" << RESET <<std::endl;
-    this->type = "WrongCat";
+    std::cout<< GREEN << "Cat constructor called" << RESET <<std::endl;
+    this->type = "Cat";
 }
 
-WrongCat::~WrongCat()
-{
-    std::cout<< RED <<"WrongCat destructor called" << RESET <<std::endl;
-}
-
-WrongCat::WrongCat(WrongCat const &wrongCat): WrongAnimal()
+Cat::Cat(Cat const &cat): Animal()
 {
 	std::cout << GREEN << "Cat copy constructor called" << RESET << std::endl;
-	(*this) = wrongCat;
+	(*this) = cat;
 }
 
-
-
-void WrongCat::makeSound() const
+Cat::~Cat()
 {
-    std::cout<< "WrongMeow!" <<std::endl;
+    std::cout<< RED << "Cat destructor called" << RESET <<std::endl;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void Cat::makeSound() const
+{
+    std::cout<< "Meow!" <<std::endl;
+}
