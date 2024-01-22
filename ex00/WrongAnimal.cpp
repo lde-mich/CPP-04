@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 14:58:15 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/19 15:18:38 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/22 14:07:04 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,37 @@
 
 WrongAnimal::WrongAnimal()
 {
-    std::cout<< "WrongAnimal constructor called" <<std::endl;
-}
-
-WrongAnimal::~WrongAnimal()
-{
-    std::cout<< "WrongAnimal destructor called" <<std::endl;
+    std::cout<< GREEN << "WrongAnimal constructor called" << RESET <<std::endl;
 }
 
 WrongAnimal::WrongAnimal(std::string type)
 {
-    std::cout<< "WrongAnimal type constructor called" <<std::endl;
+    std::cout<< GREEN << "WrongAnimal type constructor called" << RESET <<std::endl;
     this->type = type;
+}
+
+WrongAnimal::WrongAnimal(WrongAnimal const &wrongAnimal): WrongAnimal()
+{
+	std::cout << GREEN << "WrongAnimal copy constructor called" << RESET << std::endl;
+	(*this) = wrongAnimal;
+}
+
+WrongAnimal::~WrongAnimal()
+{
+    std::cout<< RED << "WrongAnimal destructor called" << RESET <<std::endl;
 }
 
 
 
-std::string WrongAnimal::getType()
+WrongAnimal  WrongAnimal::operator = (WrongAnimal const &wrongAnimal)
+{
+	this->type = wrongAnimal.getType();
+    return (*this);
+}
+
+
+
+std::string WrongAnimal::getType() const
 {
     return (this->type);
 }
@@ -42,9 +56,9 @@ void WrongAnimal::setType(std::string type)
 
 
 
-void WrongAnimal::makeSound()
+void WrongAnimal::makeSound() const
 {
-    
+    std::cout << "WrongAnimal doesn't sound!" << std::endl;
 }
 
 

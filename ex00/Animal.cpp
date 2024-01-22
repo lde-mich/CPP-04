@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:07:50 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/19 15:54:57 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/22 13:34:26 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,33 @@
 
 Animal::Animal()
 {
-    std::cout<< "Animal constructor called" <<std::endl;
+    std::cout<< GREEN << "Animal constructor called" << RESET <<std::endl;
+}
+
+
+Animal::Animal(std::string type)
+{
+    std::cout<< GREEN << "Animal type constructor called" << RESET <<std::endl;
+    this->type = type;
+}
+
+Animal::Animal(Animal const &animal)
+{
+	std::cout << GREEN << "Animal copy constructor called" << RESET << std::endl;
+	(*this) = animal;
 }
 
 Animal::~Animal()
 {
-    std::cout<< "Animal destructor called" <<std::endl;
+    std::cout<< RED << "Animal destructor called" << RESET <<std::endl;
 }
 
-Animal::Animal(std::string type)
+
+
+Animal  Animal::operator = (Animal const &animal)
 {
-    std::cout<< "Animal type constructor called" <<std::endl;
-    this->type = type;
+	this->type = animal.getType();
+    return (*this);
 }
 
 
@@ -44,7 +59,7 @@ void Animal::setType(std::string type)
 
 void Animal::makeSound() const
 {
-    
+    std::cout << "Animal doesn't sound!" << std::endl;
 }
 
 

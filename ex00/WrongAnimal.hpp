@@ -6,11 +6,16 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 15:09:58 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/19 15:15:29 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/22 13:51:37 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+
+#define GREEN "\033[1;32m"
+#define RED "\033[1;31m"
+#define RESET "\033[0m"
+
 #include <iostream>
 
 class WrongAnimal
@@ -19,14 +24,17 @@ class WrongAnimal
 		std::string type;
 
 	public:
-		void makeSound();
+		virtual void makeSound() const;
 
-		std::string getType();
+		std::string getType() const;
 		void setType(std::string type);
 
+		WrongAnimal	operator = (WrongAnimal const &wrongAnimal);
+
 		WrongAnimal();
+		WrongAnimal(WrongAnimal const &wrongAnimal);
 		WrongAnimal(std::string type);
-		~WrongAnimal();
+		virtual ~WrongAnimal();
 };
 
 

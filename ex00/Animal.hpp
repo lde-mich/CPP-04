@@ -6,11 +6,16 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:07:57 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/19 15:54:43 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/22 13:47:39 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+
+#define GREEN "\033[1;32m"
+#define RED "\033[1;31m"
+#define RESET "\033[0m"
+
 #include <iostream>
 
 class Animal
@@ -19,13 +24,16 @@ class Animal
         std::string type;
     
     public:
-        void makeSound() const;
+        virtual void makeSound() const;
 
         std::string getType() const;
         void setType(std::string type);
 
+        Animal  operator = (Animal const &animal);
+
         Animal();
+		Animal(Animal const &Animal);
         Animal(std::string type);
-        ~Animal();
+        virtual ~Animal();
 };
 
