@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 14:51:49 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/22 16:09:40 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/22 19:12:41 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Brain::~Brain()
 
 Brain  Brain::operator = (Brain const &brain)
 {
-    for(int i; i < 100; i++)
+    for(int i = 0; i < 100; i++)
         this->ideas[i] = brain.ideas[i];
     return (*this);
 }
