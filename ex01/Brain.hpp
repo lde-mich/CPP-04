@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 14:51:52 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/22 16:03:43 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:09:50 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Brain
 	public:
 		Brain	operator = (Brain const &brain);
 		
-		std::string *getIdeas() const;
+		const std::string *getIdeas() const;
 		
 		Brain();
 		Brain(Brain const &brain);

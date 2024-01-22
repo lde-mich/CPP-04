@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:09:41 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/22 15:59:03 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:11:24 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Dog::Dog(Dog const &dog): Animal()
 Dog::~Dog()
 {
     std::cout<< RED << "Dog destructor called" << RESET <<std::endl;
+    delete (this->brain);
 }
 
 

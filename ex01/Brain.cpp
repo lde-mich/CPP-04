@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 14:51:49 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/22 16:04:01 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:09:40 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Brain  Brain::operator = (Brain const &brain)
 }
 
 
-std::string *Brain::getIdeas() const
+const std::string *Brain::getIdeas() const
 {
     return (this->ideas);
 }

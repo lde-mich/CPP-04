@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:08:30 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/22 15:48:50 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/22 16:11:00 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Cat::Cat(Cat const &cat): Animal()
 Cat::~Cat()
 {
     std::cout<< RED << "Cat destructor called" << RESET <<std::endl;
+    delete (this->brain);
 }
 
 
