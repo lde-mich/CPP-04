@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:08:30 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/22 14:02:46 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/22 15:48:50 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Cat::Cat(): Animal()
 {
     std::cout<< GREEN << "Cat constructor called" << RESET <<std::endl;
+    this->brain = new Brain();
     this->type = "Cat";
 }
 
