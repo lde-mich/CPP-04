@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:07:57 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/23 12:11:01 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/23 12:30:06 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Animal
     
     public:
         virtual void makeSound() const = 0;
-        Animal  operator = (Animal const &animal);
+        Animal  &operator = (Animal const &animal);
 
         std::string getType() const;
         void setType(std::string type);

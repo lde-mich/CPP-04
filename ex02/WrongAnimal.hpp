@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 15:09:58 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/22 19:49:44 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/23 12:30:53 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class WrongAnimal
 		std::string getType() const;
 		void setType(std::string type);
 
-		WrongAnimal	operator = (WrongAnimal const &wrongAnimal);
+		WrongAnimal	&operator = (WrongAnimal const &wrongAnimal);
 
 		WrongAnimal();
 		WrongAnimal(WrongAnimal const &wrongAnimal);
