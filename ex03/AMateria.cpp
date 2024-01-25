@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 14:35:50 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/25 12:26:42 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/25 14:38:14 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ AMateria::AMateria()
 AMateria::AMateria(std::string const &type)
 {
 	std::cout<< "AMateria type constructor called" <<std::endl;
+	this->type = type;
 }
 
 AMateria::~AMateria()

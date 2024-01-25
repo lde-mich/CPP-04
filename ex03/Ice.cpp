@@ -6,18 +6,18 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:06:22 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/25 12:36:33 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/25 15:01:05 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice()
+Ice::Ice(): AMateria()
 {
     std::cout << "Ice constructor called" << std::endl;
 }
 
-Ice::Ice(Ice const &ice)
+Ice::Ice(Ice const &ice): AMateria()
 {
     std::cout << "Ice copy constructor called" << std::endl;
     (*this) = ice;
@@ -31,7 +31,7 @@ Ice::~Ice()
 
 void Ice::use(ICharacter& target)
 {
-    
+    std::cout << "* shoots an ice bolt at " << target.getName() << "*" << std::endl;
 }
 
 

@@ -6,18 +6,18 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:06:18 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/25 12:36:05 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/25 15:00:27 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure()
+Cure::Cure(): AMateria()
 {
     std::cout << "Cure constructor called" << std::endl;
 }
 
-Cure::Cure(Cure const &cure)
+Cure::Cure(Cure const &cure): AMateria()
 {
     std::cout << "Cure copy constructor called" << std::endl;
     (*this) = cure;
@@ -31,7 +31,7 @@ Cure::~Cure()
 
 void Cure::use(ICharacter& target)
 {
-    
+	std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
 }
 
 

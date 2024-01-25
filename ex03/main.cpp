@@ -6,10 +6,12 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 15:29:04 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/23 15:30:33 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/25 15:04:11 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 
 int main()
