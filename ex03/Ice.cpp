@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:06:22 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/25 12:28:48 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/25 12:36:33 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,9 @@ Ice  &Ice::operator = (Ice const &ice)
 }
 
 
-AMateria* AMateria::clone() const
+AMateria* Ice::clone() const
 {
-    
+    AMateria* ice = new Ice(*this);
+
+    return (ice);
 }

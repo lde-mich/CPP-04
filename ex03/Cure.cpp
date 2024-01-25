@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:06:18 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/25 12:28:06 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/25 12:36:05 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,9 @@ Cure  &Cure::operator = (Cure const &cure)
 }
 
 
-AMateria* AMateria::clone() const
+AMateria* Cure::clone() const
 {
-    Cure* cure = new Cure();
-
-    cure = (*this);
+    AMateria* cure = new Cure(*this);
 
     return (cure);
 }
