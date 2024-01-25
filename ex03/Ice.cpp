@@ -1,44 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 14:35:50 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/25 12:26:42 by lde-mich         ###   ########.fr       */
+/*   Created: 2024/01/25 11:06:22 by lde-mich          #+#    #+#             */
+/*   Updated: 2024/01/25 12:28:48 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "Ice.hpp"
 
-AMateria::AMateria()
+Ice::Ice()
 {
-	std::cout<< "AMateria constructor called" <<std::endl;
+    std::cout << "Ice constructor called" << std::endl;
 }
 
-AMateria::AMateria(std::string const &type)
+Ice::Ice(Ice const &ice)
 {
-	std::cout<< "AMateria type constructor called" <<std::endl;
+    std::cout << "Ice copy constructor called" << std::endl;
+    (*this) = ice;
 }
 
-AMateria::~AMateria()
+Ice::~Ice()
 {
-	std::cout<< "AMateria destructor called" <<std::endl;
-}
-
-
-
-std::string const &AMateria::getType() const
-{
-    return (this->type);
+    std::cout << "Ice destructor called" << std::endl;
 }
 
 
-
-AMateria  &AMateria::operator = (AMateria const &aMateria)
+void Ice::use(ICharacter& target)
 {
-	this->type = aMateria.getType();
+    
+}
+
+
+Ice  &Ice::operator = (Ice const &ice)
+{
+	this->type = ice.getType();
     return (*this);
 }
 
+
+AMateria* AMateria::clone() const
+{
+    
+}
