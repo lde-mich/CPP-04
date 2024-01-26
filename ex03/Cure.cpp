@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:06:18 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/25 15:00:27 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/26 16:11:03 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 Cure::Cure(): AMateria()
 {
-    std::cout << "Cure constructor called" << std::endl;
+    // std::cout << "Cure constructor called" << std::endl;
 }
 
 Cure::Cure(Cure const &cure): AMateria()
 {
-    std::cout << "Cure copy constructor called" << std::endl;
+    // std::cout << "Cure copy constructor called" << std::endl;
     (*this) = cure;
 }
 
 Cure::~Cure()
 {
-    std::cout << "Cure destructor called" << std::endl;
+    // std::cout << "Cure destructor called" << std::endl;
 }
 
 

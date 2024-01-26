@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:59:59 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/26 15:12:18 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/26 16:10:54 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 Character::Character()
 {
-    std::cout << "Character constructor called" << std::endl;
+    // std::cout << "Character constructor called" << std::endl;
 }
 
 Character::Character(Character const &character)
 {
-    std::cout << "Character copy constructor called" << std::endl;
+    // std::cout << "Character copy constructor called" << std::endl;
 	(*this) = character;
 }
 
 Character::Character(std::string name)
 {
-	std::cout << "Character name constructor called" << std::endl;
+	// std::cout << "Character name constructor called" << std::endl;
 	this->name = name;
 }
 
 Character::~Character()
 {
-	std::cout << "Character destructor called" << std::endl;
+	// std::cout << "Character destructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 		delete(this->item[i]);
 }
