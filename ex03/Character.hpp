@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:20:49 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/26 12:38:13 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/26 14:47:24 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Character: ICharacter
 {
     private:
 		AMateria *item[4];
+		AMateria *floor[256];
 		std::string name;
 		
     public:

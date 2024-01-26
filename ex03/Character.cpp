@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:59:59 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/26 12:43:22 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/26 15:12:18 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,15 +61,30 @@ Character& Character::operator = (Character const &character)
 
 void Character::equip(AMateria* m)
 {
-	
+	for (int i = 0; i < 4; i++)
+	{
+		if (!this->item[i])
+		{
+			this->item[i] = m;
+			break;
+		}
+	}
 }
 
 void Character::unequip(int idx)
 {
-	
+	for (int i = 0; i < 256; i++)
+	{
+		if (!this->floor[i])
+		{
+			this->floor[i] = this->item[idx];
+			delete(this->item[idx]);
+			break;
+		}
+	}
 }
 
 void Character::use(int idx, ICharacter& target)
 {
-	
+	this->item[idx]->use(target);
 }
