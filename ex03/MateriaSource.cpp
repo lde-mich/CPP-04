@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 14:15:09 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/26 14:25:36 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/26 16:08:02 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,35 @@ MateriaSource::MateriaSource(MateriaSource const &materiaSource)
 MateriaSource::~MateriaSource()
 {
 	std::cout << "MateriaSource destructor called" << std::endl;
+	for (int i = 0; i < 2; i++)
+		delete(this->archive[i]);
 }
 
 
 
-void MateriaSource::learnMateria(AMateria*)
+void MateriaSource::learnMateria(AMateria *materia)
 {
-	
+	for (int i = 0; i < 4; i++)
+	{
+		if (!this->archive[i])
+		{
+			this->archive[i] = materia;
+			break;
+		}
+	}
 }
 
-AMateria* MateriaSource::createMateria(std::string const & type)
+AMateria* MateriaSource::createMateria(std::string const &type)
 {
-	
+	AMateria *temp = NULL;
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->archive[i] && this->archive[i]->getType() == type)
+		{
+			temp = this->archive[i]->clone();
+			break;
+		}
+			
+	}
 }

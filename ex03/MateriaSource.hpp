@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 14:15:44 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/26 14:24:17 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/26 15:53:20 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@
 class MateriaSource: IMateriaSource
 {
 	private:
+		AMateria *archive[4];
 		
 	public:
-        void learnMateria(AMateria*);
-        AMateria* createMateria(std::string const & type);
+        void learnMateria(AMateria *materia);
+        AMateria* createMateria(std::string const &type);
 
 		MateriaSource(MateriaSource const &materiaSource);
 		MateriaSource();
