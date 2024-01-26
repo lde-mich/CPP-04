@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:59:59 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/26 12:00:06 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/26 12:43:22 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,17 @@ Character::Character(Character const &character)
 	(*this) = character;
 }
 
+Character::Character(std::string name)
+{
+	std::cout << "Character name constructor called" << std::endl;
+	this->name = name;
+}
+
 Character::~Character()
 {
 	std::cout << "Character destructor called" << std::endl;
+	for (int i = 0; i < 4; i++)
+		delete(this->item[i]);
 }
 
 
@@ -47,4 +55,21 @@ Character& Character::operator = (Character const &character)
     for (int i = 0; i < 4; i++)
 		this->item[i] = character.item[i];
 	return (*this);
+}
+
+
+
+void Character::equip(AMateria* m)
+{
+	
+}
+
+void Character::unequip(int idx)
+{
+	
+}
+
+void Character::use(int idx, ICharacter& target)
+{
+	
 }
