@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 15:01:40 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/25 15:17:41 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/26 11:59:41 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ class AMateria;
 
 class ICharacter
 {
-    private:
-        std::string name;
     public:
     
         virtual void equip(AMateria* m) = 0;
