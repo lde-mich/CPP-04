@@ -6,11 +6,18 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:59:59 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/26 16:10:54 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:49:43 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
+
+ICharacter::ICharacter()
+{
+    // std::cout << "ICharacter constructor called" << std::endl;
+}
+
+
 
 Character::Character()
 {

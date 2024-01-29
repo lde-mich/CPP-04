@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 14:15:44 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/26 15:53:20 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:53:46 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <iostream>
 #include "IMateriaSource.hpp"
 
-class MateriaSource: IMateriaSource
+class MateriaSource: public IMateriaSource
 {
 	private:
 		AMateria *archive[4];

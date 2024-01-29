@@ -6,11 +6,18 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 14:15:09 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/26 16:10:24 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:55:14 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
+
+IMateriaSource::IMateriaSource()
+{
+	// std::cout << "IMateriaSource constructor called" << std::endl;
+}
+
+
 
 MateriaSource::MateriaSource()
 {

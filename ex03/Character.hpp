@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:20:49 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/26 14:47:24 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:54:26 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
 
-class Character: ICharacter
+class Character: public ICharacter
 {
     private:
 		AMateria *item[4];
