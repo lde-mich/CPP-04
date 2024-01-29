@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 15:29:04 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/26 16:17:14 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 15:57:54 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,12 @@ int main()
     
     tmp = src->createMateria("ice");
     me->equip(tmp);
+    
     tmp = src->createMateria("cure");
     me->equip(tmp);
+    
     ICharacter* bob = new Character("bob");
+    
     me->use(0, *bob);
     me->use(1, *bob);
     

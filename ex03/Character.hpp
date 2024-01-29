@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:20:49 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/29 12:11:27 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 15:42:22 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ class Character: public ICharacter
 		std::string const & getName() const;
 		void setName(std::string name);
 
-		void equip(AMateria* m);
-        void unequip(int idx);
-        void use(int idx, ICharacter& target);
+		virtual void equip(AMateria* m);
+        virtual void unequip(int idx);
+        virtual void use(int idx, ICharacter& target);
 
 		Character(Character const &character);
 		Character(std::string name);

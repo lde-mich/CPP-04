@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:02:02 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/25 12:27:57 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 15:43:45 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Cure: public AMateria
 
     public:
 		AMateria* clone() const;
-        void use(ICharacter& target);
+        virtual void use(ICharacter& target);
 		Cure& operator = (Cure const &cure);
 	
 		Cure();

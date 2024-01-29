@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 14:15:09 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/29 12:16:34 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 16:00:24 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ IMateriaSource::IMateriaSource()
 MateriaSource::MateriaSource()
 {
 	// std::cout << "MateriaSource constructor called" << std::endl;
+	for(int i = 0; i < 4; i++)
+		this->archive[i] = NULL;
 }
 
 MateriaSource::MateriaSource(MateriaSource const &materiaSource)
@@ -45,6 +47,7 @@ void MateriaSource::learnMateria(AMateria *materia)
 	{
 		if (!this->archive[i])
 		{
+			std::cout <<"ciao"<< std::endl;
 			this->archive[i] = materia;
 			break;
 		}

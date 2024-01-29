@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:06:22 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/26 16:11:16 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 15:48:57 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ Ice::~Ice()
 
 void Ice::use(ICharacter& target)
 {
+        std::cout << "cis"<<std::endl;
     std::cout << "* shoots an ice bolt at " << target.getName() << "*" << std::endl;
 }
 

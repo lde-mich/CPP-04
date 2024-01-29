@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:01:13 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/25 12:29:29 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 15:43:30 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Ice: public AMateria
 
     public:
 		AMateria* clone() const;
-        void use(ICharacter& target);
+        virtual void use(ICharacter& target);
 		Ice& operator = (Ice const &ice);
 	
 		Ice();

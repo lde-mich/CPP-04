@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 14:36:00 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/29 12:12:41 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 15:46:27 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class AMateria
     public:
     
         virtual AMateria* clone() const = 0;
-        virtual void use(ICharacter& target);
+        virtual void use(ICharacter& target) = 0;
         AMateria& operator = (AMateria const &aMateria);
         
         std::string const & getType() const;

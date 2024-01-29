@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:59:59 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/29 12:06:05 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 15:33:23 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,30 @@ ICharacter::ICharacter()
 Character::Character()
 {
     // std::cout << "Character constructor called" << std::endl;
+	for(int i = 0; i < 4; i++)
+		this->item[i] = NULL;
+	for(int i = 0; i < 4; i++)
+		this->floor[i] = NULL;
 }
 
 Character::Character(Character const &character)
 {
     // std::cout << "Character copy constructor called" << std::endl;
 	(*this) = character;
+	for(int i = 0; i < 4; i++)
+		this->item[i] = NULL;
+	for(int i = 0; i < 4; i++)
+		this->floor[i] = NULL;
 }
 
 Character::Character(std::string name)
 {
 	// std::cout << "Character name constructor called" << std::endl;
 	this->name = name;
+	for(int i = 0; i < 4; i++)
+		this->item[i] = NULL;
+	for(int i = 0; i < 4; i++)
+		this->floor[i] = NULL;
 }
 
 Character::~Character()
@@ -95,5 +107,6 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter& target)
 {
-	this->item[idx]->use(target);
+	if (item[idx] != 0)
+		this->item[idx]->use(target);
 }
