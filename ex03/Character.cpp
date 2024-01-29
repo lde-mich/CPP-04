@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:59:59 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/29 11:49:43 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 12:06:05 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ Character::~Character()
 	// std::cout << "Character destructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 		delete(this->item[i]);
+	for (int i = 0; i < 4; i++)
+		delete(this->floor[i]);
 }
 
 

@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 14:36:00 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/26 11:47:11 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 12:12:41 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ class AMateria
         
         AMateria();
         AMateria(std::string const & type);
-		~AMateria();
+		virtual ~AMateria();
 };
