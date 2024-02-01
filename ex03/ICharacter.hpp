@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 15:01:40 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/29 11:48:40 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/02/01 12:02:51 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ class ICharacter
         
         virtual std::string const & getName() const = 0;
         
-        ICharacter();
         virtual ~ICharacter() {}
 };

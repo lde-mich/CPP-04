@@ -6,16 +6,13 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 15:29:04 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/29 15:57:54 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/02/01 11:21:20 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
 #include "Cure.hpp"
 #include "Ice.hpp"
-#include "ICharacter.hpp"
 #include "Character.hpp"
-#include "IMateriaSource.hpp"
 #include "MateriaSource.hpp"
 
 int main()

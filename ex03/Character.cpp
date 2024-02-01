@@ -6,16 +6,16 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:59:59 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/29 15:33:23 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/02/01 12:04:01 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-ICharacter::ICharacter()
-{
-    // std::cout << "ICharacter constructor called" << std::endl;
-}
+// ICharacter::ICharacter()
+// {
+//     std::cout << "ICharacter constructor called" << std::endl;
+// }
 
 
 
@@ -73,8 +73,12 @@ void Character::setName(std::string name)
 
 Character& Character::operator = (Character const &character)
 {
+	// std::cout << "Copy Character assignment called" << std::endl;
     for (int i = 0; i < 4; i++)
 		this->item[i] = character.item[i];
+	for (int i = 0; i < 256; i++)
+		this->floor[i] = character.floor[i];
+	this->setName(character.name);
 	return (*this);
 }
 
@@ -107,6 +111,8 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter& target)
 {
-	if (item[idx] != 0)
+	if (idx >= 0 && idx < 4 && item[idx] != NULL)
+	{
 		this->item[idx]->use(target);
+	}
 }

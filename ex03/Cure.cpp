@@ -6,18 +6,18 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:06:18 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/29 15:39:09 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/02/01 12:04:10 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure(): AMateria()
+Cure::Cure(): AMateria("cure")
 {
     // std::cout << "Cure constructor called" << std::endl;
 }
 
-Cure::Cure(Cure const &cure): AMateria()
+Cure::Cure(Cure const &cure): AMateria("cure")
 {
     // std::cout << "Cure copy constructor called" << std::endl;
     (*this) = cure;

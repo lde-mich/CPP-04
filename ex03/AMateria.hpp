@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 14:36:00 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/29 15:46:27 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/01/29 16:13:10 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class AMateria
         virtual void use(ICharacter& target) = 0;
         AMateria& operator = (AMateria const &aMateria);
         
-        std::string const & getType() const;
+        std::string const &getType() const;
         
         AMateria();
         AMateria(std::string const & type);
