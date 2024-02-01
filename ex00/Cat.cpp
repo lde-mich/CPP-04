@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:08:30 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/22 14:02:46 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:14:02 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ Cat::~Cat()
     std::cout<< RED << "Cat destructor called" << RESET <<std::endl;
 }
 
+
+Cat  Cat::operator = (Cat const &cat)
+{
+    (void)cat;
+    return (*this);
+}
 
 
 void Cat::makeSound() const

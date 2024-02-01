@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:09:41 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/22 14:03:00 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:14:31 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ Dog::~Dog()
     std::cout<< RED << "Dog destructor called" << RESET <<std::endl;
 }
 
+
+Dog  Dog::operator = (Dog const &dog)
+{
+    (void)dog;
+    return (*this);
+}
 
 
 void Dog::makeSound() const

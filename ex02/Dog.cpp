@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:09:41 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/22 16:11:24 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:22:48 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@ Dog::~Dog()
     delete (this->brain);
 }
 
+
+Dog	Dog::operator = (Dog const &dog)
+{
+    this->brain = dog.brain;
+    return (*this);
+}
 
 
 void Dog::makeSound() const

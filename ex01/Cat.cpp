@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:08:30 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/22 16:11:00 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:17:41 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@ Cat::~Cat()
     delete (this->brain);
 }
 
+
+Cat	Cat::operator = (Cat const &cat)
+{
+    this->brain = cat.brain;
+    return (*this);
+}
 
 
 void Cat::makeSound() const

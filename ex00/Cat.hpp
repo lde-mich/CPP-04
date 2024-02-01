@@ -6,7 +6,7 @@
 /*   By: lde-mich <lde-mich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 12:08:48 by lde-mich          #+#    #+#             */
-/*   Updated: 2024/01/22 13:49:16 by lde-mich         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:08:10 by lde-mich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Cat: public Animal
 {
 	public:
 		void makeSound() const;
+		Cat  operator = (Cat const &cat);
 		
 		Cat();
 		Cat(Cat const &cat);
